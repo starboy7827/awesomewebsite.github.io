@@ -1,0 +1,334 @@
+@font-face {
+    font-family: 'Alegreya-BoldItalic';
+    src: url(fonts/Alegreya-BoldItalic.ttf) format('truetype');
+    /* Add other font properties here (e.g., font-weight, font-style) */
+}
+@font-face {
+    font-family: 'Luminous-Free';
+    src:url(fonts/Luminous-Free.otf)
+    /* Add other font properties here (e.g., font-weight, font-style) */
+}
+@font-face {
+    font-family: 'CabbagetownSmCaps';
+    src: url(fonts/CabbagetownSmCaps.ttf)
+    /* Add other font properties here (e.g., font-weight, font-style) */
+}
+@font-face {
+    font-family: 'Magic-Vintage-Demo';
+    src: url(fonts/Magic-Vintage-Demo.otf) format('woff');
+       /* Add other font properties here (e.g., font-weight, font-style) */
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    font-weight: bold;
+    background-color: #00000061;
+    color: #ffffff; 
+}
+
+.text {
+    color: rgba(0, 0, 0, 1); /* Black text with full opacity */
+  }
+#background-video {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 60%; /* Adjust the opacity as needed */ 
+}
+header {
+    background: linear-gradient(135deg, #000000d9, #000000b1); /* Gradient background */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    font-family: monospace; /* Stylish font for header */
+}
+h4 {
+    font-style: italic;
+    font-family: monospace;
+}
+/* Navigation Styling */
+nav a {
+    color: #ffffff; /* White color */
+    text-decoration: none;
+    margin: 0 15px;
+    top: 20%;
+    font-size: 25px;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #dfe526; /* Tomato color on hover */
+    transform: scale(1.1); /* Popout effect */
+    font-weight: 700;
+    font-family: Roboto;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color:#dfe526;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+ 
+main {
+    padding: 2rem;
+    background: url('your-background-image.jpg') no-repeat center center/cover; 
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0); 
+    margin: 2rem auto;
+    max-width: 1200px;
+    opacity: 100%; /* Adjust the opacity as needed */
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animated {
+    opacity: 0;
+    animation: fadeInUp 1s forwards;
+}
+.destinations {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.destinations h2 {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-weight: 800s;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000; 
+}
+.destination-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #00000017;
+    border: 1px solid #00000000; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.609); 
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.destination-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.195); 
+}
+.destination-card img {
+    max-width: 70%;
+    height: auto;
+    border-radius: 12px; 
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease;
+}
+.destination-card img:hover {
+    transform: scale(1.13);
+}
+.destination-info {
+    flex: 1;
+}
+.destination-info h3 {
+    margin: 0.5rem 0;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1000;
+    color: #00e5ff;
+    text-decoration-color: #74747466;
+    transform: translateY(-15px); /* Adjust this value to move the text higher */
+    text-decoration-line: underline;
+}
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the white box */
+.white-box {
+    background-color: #0000005d;
+    border: 1px solid #504f4f68;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0), 0 0 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* Style the content within the white box */
+.destinations .destination-info {
+    text-align: center;
+}
+
+h3, p, p1 {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+
+
+   /* Remove underlines */
+
+.destination-info p {
+    margin: 0.5rem 0;
+    font-weight: 900;
+    color: #d9d5d5; /* Slightly lighter color for text */
+    text-decoration: underline;
+    text-decoration-color: #74747466; /* Remove underlines */
+ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.destination-info p1 {
+    margin: 0.5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1200;
+    font-size: 1.2rem;
+    color: #ffffff; /* Slightly lighter color for text */
+   text-decoration: underline;
+   text-decoration-color: #74747466;
+   text-underline-offset: 2px;
+    /* Remove underlines */
+}
+
+
+
+.hover-budget {
+    position: relative;
+    cursor: pointer;
+    right: -20px;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+.hover-budget:hover{
+    transform:sscale(1.2); /* Adjust the scale value as needed */
+}
+.destination-info .hover-budget:hover {
+    transform: scale(1.7);
+    color: #000000; /* Optional: Change color on hover */
+}
+
+footer {
+    background: linear-gradient(135deg, #000000ba, #000000c0); /* Gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100%);  /* Move footer out of view */
+    transition: opacity 0.5s ease-in-out;
+}
+footer.visible {
+    opacity: 1; /* Visible when scrolled to the end */
+    transform: translateY(0); /* Move footer into view */
+}
+
+
+/* Footer Styling */
+footer p {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+footer nav a:hover {
+    color: #dfe526;  /* Tomato color on hover */
+}
+
+footer nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #dfe526;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+footer nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Popout Effect */
+footer nav a:hover {
+    transform: scale(1.1);
+}
+
+/* Additional Styling */
+footer nav a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+footer nav a:hover {
+    font-weight: 700;
+}

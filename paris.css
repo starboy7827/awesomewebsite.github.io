@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Luminous-Free';
+    src:url(fonts/Luminous-Free.otf)
+    /* Add other font properties here (e.g., font-weight, font-style) */
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+header {
+    text-align: center;
+    color: white;
+    background-color: #000000ed;
+    padding: 20px 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    position: relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #dfe526; /* Tomato color on hover */
+    transform: scale(1.1); /* Popout effect */
+    font-weight: 700;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color:#dfe526;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.281);
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+}
+h1 {
+    color: #ffffff;
+    font-style: italic;
+    animation: popOut 4s ease-out;
+}
+h2 {
+    color:  #000000;
+    animation: popIn 1s ease-out;
+    font-size: 30px;
+    font-weight: 1000;
+    font-style: inherit;
+    text-decoration: underline;
+    text-decoration-color: #00000066;
+    text-underline-offset: 5px;
+
+}
+
+
+p {
+    line-height: 1.6;
+}
+.description-container {
+    padding: 20px;
+    background: rgba(255, 0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.363);
+    animation: slideUp 2s ease-in-out;
+}
+.info {
+    font-size: 18px; /* Adjust the size as needed */
+    font-weight: 750; /* Make the text bolder */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 100%; /* Adjust the opacity as needed */
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slideInFromBottom {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes popOut {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Additional Graphics */
+header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 10px auto 0;
+    animation: expand 1s ease-out;
+}
+
+@keyframes expand {
+    from { width: 0; }
+    to { width: 100px; }
+}

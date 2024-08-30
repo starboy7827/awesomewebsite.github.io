@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            font-style: italic;
+            padding: 0;
+            background-color: #878686a7;
+        }
+        .container {
+            max-width: 550px;
+        
+            margin: 0 auto;
+            padding: 10px;
+           
+        }
+        /* Header styling */
+   header {
+        text-align: center;
+        color: white;
+        background-color: #000000bb;
+        padding: 30px 0;
+}
+        header h1 {
+            font-size: 30px;
+            margin: 5px;
+            animation: popOut 4s ease-out;
+        }
+        
+        /* Contact form styling */
+        .contact-form {
+            background-color: #b3b0b0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.753);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .contact-form input[type="text"],
+        .contact-form textarea {
+            background-color: #f5f5dc74;
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #00000073;
+            border-radius: 6px;
+        }
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            font-style: italic;
+            margin-left: 120px;
+            width: 20%;
+            display: block;
+            padding: 12px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+        /* Social icons styling */
+        .social-icons {
+            display: flex;
+            flex-direction: column; /* Display vertically */
+            align-items: right; /* Center horizontally */
+            gap: 10px;
+            margin-top: -330px; /* Adjust as needed */
+            margin-left: 30px;
+        }
+        .social-icons a {
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+        
+        /* Example icon sizes (adjust as needed) */
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+         /* Email and phone text */
+         .contact-info {
+            position: absolute;
+            font-style: italic;
+            top: 160px; /* Adjust vertical position */
+            right: 100px; /* Adjust horizontal position */
+            color: #000000;
+            font-size: 20px;
+        }
+
+        footer {
+    text-align: center;
+    padding: 36px;
+   margin-top:  180px;/* Adjust the value to move the footer down */
+    background-color: #000000e6;
+}
+
+footer p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-style: italic;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes popOut {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <header class="popup-headers">
+            <h1>Contact Us</h1>
+            <div class="contact-info">
+                Email: contact@example.com<br><br>
+                Phone: +1 (123) 456-7890
+            </div>
+        </header>
+        <div class="contact-form">
+           <div class="container">
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="3" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+           </div>
+        </div>
+    
+    <div class="social-icons">
+        <a href="https://www.instagram.com/your_instagram_username">
+            <img src="instagram.png" alt="Instagram"> 
+        </a>
+        <a href="https://www.facebook.com/your_facebook_page">
+            <img src="facebook.png" alt="Facebook"> 
+        </a>
+        <a href="https://twitter.com/your_twitter_handle">
+            <img src="twitter.jpeg" alt="Twitter">
+        </a>
+    </div>
+    </div>
+    <footer><p>© 2024 NatureNook Adventures</p></footer>
+</body>
+</html>
